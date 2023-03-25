@@ -1,0 +1,127 @@
+{% extends 'book_rank_app/base_layout.html' %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'TrendingMain.css' %}">
+<link rel="stylesheet" href="{% static 'book_rank_app/Bestseller.css' %}">
+    <div style="margin-bottom: 20px">
+
+<!--        실시간 인기 도서: Naver         -->
+            <article class="book_rank">
+                <div class="all_frame">
+                    <div class="layout__flex-left">
+                        <h2 class="lists__title css-0" style="margin-bottom:10px;">실시간 인기도서: 네이버</h2>
+                    </div>
+                    <div class="lists__slides-vertical css-1ufpzhj em9l2ot0">
+                        <div class="swiper swiper-initialized swiper-horizontal swiper-pointer-events">
+                            <div class="swiper-wrapper" aria-live="polite" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
+
+                                {% for item in naver %}
+                                <a href={{ item.link }}>
+                                    <li class = 'right'>
+                                        <img class="bestseller_image" src={{ item.image_src }}>
+                                        <div class ="inner_right_div">
+                                            <span class="inner_rank base_font_clr" style="color:gold; font-weight: 700;">
+                                                {{ item.rank }}
+                                            </span>
+                                            <div class="title_author_wrapper base_font_clr">
+                                                <div class="book_title_content">
+                                                    {{ item.title }}
+                                                </div>
+                                                <div class="book_author_content">
+                                                    {{ item.author }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </a>
+                                {% endfor %}
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </article>
+
+    </div>
+
+
+    <div style="margin-bottom: 20px">
+
+<!--        실시간 인기 도서: Yes24         -->
+            <article class="book_rank">
+                <div class="all_frame">
+                    <div class="layout__flex-left">
+                        <h2 class="lists__title css-0" style="margin-bottom:10px;">실시간 인기도서: Yes24</h2>
+                    </div>
+                    <div class="lists__slides-vertical css-1ufpzhj em9l2ot0">
+                        <div class="swiper swiper-initialized swiper-horizontal swiper-pointer-events">
+                            <div class="swiper-wrapper" aria-live="polite" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
+
+                                {% for item in yes24 %}
+                                <a href={{ item.link }}>
+                                    <li class = 'right'>
+                                        <img class="bestseller_image" src={{ item.image_src }}>
+                                        <div class ="inner_right_div">
+                                            <span class="inner_rank base_font_clr" style="color:gold; font-weight: 700;">
+                                                {{ item.rank }}
+                                            </span>
+                                            <div class="title_author_wrapper base_font_clr">
+                                                <div class="book_title_content">
+                                                    {{ item.title }}
+                                                </div>
+                                                <div class="book_author_content">
+                                                    {{ item.author }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </a>
+                                {% endfor %}
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </article>
+
+    </div>
+
+
+
+<!--        요즘 뜨는 도서            -->
+    <div class="trending-main-body-wrapper" style="clear:both;">
+        <section class="lists lists__noneLazy">
+            <div class="layout__flex-left">
+                <h2 class="lists__title css-0">요즘 뜨는 도서</h2>
+                <a href="{% url 'trend_book_app:trends-all' %}"><button type="button" class="to_detail_button" title="전체보기 버튼" style="color:white; font-size: small;">전체보기</button></a>
+            </div>
+            <div class="lists__slides-vertical css-1ufpzhj em9l2ot0">
+                <div class="swiper swiper-initialized swiper-horizontal swiper-pointer-events">
+                    <div class="swiper-wrapper" id="swiper-wrapper-4e3cc4bb97ae819c" aria-live="polite" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
+                        {% for key, value in books %}
+                        <div class="swiper-slide item swiper-slide-active" data-swiper-slide-index="0" role="group" aria-label="{{key}} / 20" style="width: 170px; margin-right: 9px;">
+                           <a class="undefined css-4g6ai3 e1pgrcxl0" href="/contents/M000370950">
+                                <div class="item__thumb item__thumb-25x36">
+                                   <div class="item__image lazy">
+                                        <picture class="loaded css-ovhph3 euf32k20">
+                                            <source srcset="{{ value.image}}" type="image/webp" class="css-1doy9ip euf32k21" ><img class="loaded css-1doy9ip euf32k22" src={{value.image}} alt={{value.text}}></picture>
+                                    </div>
+                                </div>
+                                <div class="item__info item__info-rank">
+                                   <span class="item__rank-no">{{key}}</span>
+                                   <p class="item__title">{{value.title}}</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        {% endfor %}
+                    </div>
+<!--                    <a href="{% url 'trend_book_app:trends-all' %}"><button type="button" class="slide_item_all" title="전체보기 버튼" style="color:white; font-size: small;">전체보기</button></a>-->
+                 </div>
+             </div>
+        </section>
+    </div>
+{% endblock %}

@@ -1,0 +1,15 @@
+0. 코드를 수정한다.
+
+1. git pull origin hyejin
+아니면
+git pull
+(hyejin) 파란색 브랜치인지 반드시 확인해주세요!
+
+2. git add .
+   -> 그동안 수정된 파일이 전부다 '깃 반영 예정 상태'로 바뀜
+
+3. git commit -m "[add] 수정사항 간단하게 영어로 작성"
+   -> git commit -m "[add] yes24 rank"
+
+4. git push origin hyejin
+

@@ -1,0 +1,65 @@
+.right{
+
+    float:left;
+    list-style:none;
+    }
+
+ .ul{
+
+ list-style:none;
+
+ }
+
+
+ .bestseller_image {
+
+    width:110px;
+    height:152px;
+    /*background-color:green;*/
+    /*margin:2.5px;*/
+    margin: 2.5px 14px 2.5px 0px;
+    padding:1px;
+    float:left;
+
+    }
+
+.line {
+ float:bottom
+}
+
+
+.base_font_clr {
+    color: white;
+}
+
+.title_author_wrapper {
+    width:100px;
+    text-overflow: ellipsis;
+    /*white-space : nowrap;*/
+    overflow : hidden;
+
+}
+
+.book_title-content {
+    width:95px;
+    /*font-size: 7px;*/
+    vertical-align : top;
+
+    font-size: 0.8em;
+    line-height: 2;
+    font-weight: 700;
+
+
+}
+.book_author_content{
+    font-size:small;
+    vertical-align : top;
+    }
+
+
+/* 추가 */
+
+.article_header{
+    color: #31B9CC;
+
+}

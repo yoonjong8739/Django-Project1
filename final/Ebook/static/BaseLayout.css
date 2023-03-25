@@ -1,0 +1,83 @@
+body {
+    background-color: #1E1E1E;
+}
+
+
+.base_topbar_container {
+    box-shadow: 0px 15px 5px -2px #255E6A;
+    border-style: solid;
+    <!--border-color: pink;--!>
+}
+.base_img_container {
+    margin-left: 2%;
+    padding: 15px;
+    display: inline-block;
+    <!--float: left;--!>
+}
+.base_login_container {
+    position: relative;
+
+    <!--float:right;--!>
+}
+
+img.base_logo {
+    width: 180px;
+
+}
+
+header {
+  display: flex;
+  align-items: center;
+}
+
+nav.base_login_wrapper {
+    display: inline-block;
+}
+nav.base_login_wapper {
+  margin-left: auto;
+}
+
+h1 {
+  display: inline-block;
+  vertical-align: middle;
+  color: white;
+  margin: 0.5rem;
+  padding: 0;
+}
+
+nav.base_login_wrapper {
+  margin-left: 600px;
+}
+
+ul.base_login_buttons_container {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.base_login_buttons_container {
+    margin-right: 2%;
+    display: inline-block;
+    <!--border-style: solid;--!>
+    <!--border-color: red;--!>
+}
+
+.base_login_btn_left {
+    width: 80px;
+    <!--border: solid 1px yellow;--!>
+
+}
+
+.base_login_btn_right {
+    width: 80px;
+    <!--border: solid 1px white;--!>
+}
+
+.base_topbar_botton {
+    margin-bottom: 10px;
+}
+
+div#main_body {
+    margin: 20px;
+}

@@ -1,0 +1,41 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+</head>
+<body> -->
+
+{% extends 'book_rank_app/base_layout.html' %}
+
+{% block content %}
+{% load static %}
+<div style="background-color: white; color:black">
+    This is main page.
+    <br>
+    {% if user.user_id != None %}
+    <a href="{% url 'user_app:logout' %}" >{{ user.user_name }} 로그아웃</a>
+    <a href="{% url 'user_app:mypage' %}" >마이페이지</a>
+    <a href="{% url 'user_app:recommend' %}"> 추천 도서 </a>
+    
+    {% else %}
+    <a href="{% url 'user_app:login' %}" >로그인</a>
+    <a href="{% url 'user_app:join' %}" >회원가입</a>
+    {% endif %}
+
+    <br>
+    <br>
+    searching ...
+    <form class="searchForm" method="GET" action="{% url 'user_app:books' %}">
+        <input type="search" value="" placeholder="책 제목으로 검색하기" name="keyword">
+        <button type="submit">Search</button>
+    </form>
+
+</div>
+
+<!-- </body>
+</html> -->
+
+{% endblock %}

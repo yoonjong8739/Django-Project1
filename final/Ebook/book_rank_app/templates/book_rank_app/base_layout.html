@@ -1,0 +1,76 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Bali Liabrary: 책읽기 전 찾아보는 ebook 통합 검색 사이트</title>
+    <link rel="stylesheet" href="{% static 'BaseLayout.css' %}">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="base_topbar_container">
+
+
+
+
+            <div class="base_img_container">
+                <a href="/">
+                    <img class="base_logo" src="{% static 'logo.png' %}">
+                </a>
+            </div>
+            {% if user.is_authenticated%}
+                <nav class="base_login_wrapper">
+                    <ul class="base_login_buttons_container">
+                        <li>
+                            <span style="color:white; font-size: x-small; margin-right: 5px;">반갑습니다, {{ user.username }}님 !</span>
+                            <span style="color:white; font-size: x-small;">
+                                <a href="{% url 'user_app:logout' %}" >logout</a>
+                            </span>
+                        </li>
+                    </ul>
+                </nav>
+            {% else %}
+                <nav class="base_login_wrapper">
+                    <ul class="base_login_buttons_container">
+                        <li class="idk">
+                            <a href="{% url 'user_app:login' %}" >
+                                <img class="base_login_btn_left" src="{% static 'login_btn.png' %}">
+                            </a>
+
+                        </li>
+                        <li class="idk">
+                            <a href="{% url 'user_app:join' %}" >
+                                <img class="base_login_btn_right" src="{% static 'signup_btn.png' %}">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            {% endif %}
+
+<!--            <div class="base_img_container">-->
+<!--                <img class="base_logo" src="{% static 'logo.png' %}">-->
+<!--            </div>-->
+<!--            <div class="base_login_container">-->
+<!--                {% if user.is_authenticated %}-->
+<!--                <div>hola</div>-->
+<!--                {% else %}-->
+<!--                <div class="base_login_buttons_container" style="float:right;">-->
+<!--                    <img class="base_login_btn_left" src="{% static 'login_btn.png' %}">-->
+<!--                    <img class="base_login_btn_right" src="{% static 'signup_btn.png' %}">-->
+<!--                </div>-->
+<!--                {% endif %}-->
+<!--            </div>-->
+
+
+        </div>
+        <div id="main_body">
+        {% block content %}
+        {% endblock%}
+        </div>
+
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Billie</title>
+</head>
+<body> -->
+
+{% extends 'book_rank_app/base_layout.html' %}
+
+{% block content %}
+{% load static %}    
+    <div class="container" style="background-color: white; color:black">
+        <h1>정보 수정</h1>
+        <form method="POST">
+            {% csrf_token %}
+            이름 : <br>
+            <input name="user_name" type="text">
+            <br>
+            비밀번호 : <br>
+            <input name="user_pwd" type="password">
+            <br>
+            비밀번호 확인 : <br>
+            <input name="check_pwd" type="password">
+            <br>
+            생년월일 : <br>
+            <input name="birthday" type="date">
+            <br><br>
+            <input type="submit" class="update_btn" value="update">
+        </form>
+    </div>
+<!--
+</body>
+</html>
+-->
+
+{% endblock %}

@@ -1,0 +1,227 @@
+
+
+body a, button, dd, div, dl, dt, html, input, label, li, p, span, td, textarea, th, ul {
+    font-family: Noto Sans KR,-apple-system,BlinkMacSystemFont,Roboto,Segoe UI,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
+}
+
+abbr, blockquote, body, button, caption, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, hgroup, html, input, label, legend, li, ol, p, pre, select, table, tbody, td, textarea, tfoot, th, thead, tr, ul {
+    padding: 0;
+    margin: 0;
+}
+
+a, a:active, a:focus, a:hover, a:visited {
+    text-decoration: none;
+}
+
+
+
+.item>a {
+    position: relative;
+    display: block;
+}
+.item>a {
+    border-radius: .425em;
+}
+<style>
+.css-4g6ai3 {
+    cursor: pointer;
+}
+
+
+section {
+    display: block;
+}
+
+/*.swiper-slide-active{
+   border-style:solid;
+   border-color:red;
+}*/
+
+.layout__flex-left {
+    justify-content: flex-start;
+}
+
+.layout__flex-left {
+    display: flex;
+    align-items: center;
+}
+
+.lists+.lists h2 {
+    margin-top: .9375em;
+}
+
+.lists h2 {
+    margin: 0;
+    padding: 0 0 1rem;
+    font-size: 1.667rem;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
+}
+
+.css-1ufpzhj {
+    overflow: hidden;
+    margin: -4rem -1.333rem -1.5rem;
+    padding: 4rem 1.333rem 2.5rem;
+}
+
+.css-1ufpzhj .swiper {
+    overflow: visible;
+}
+.swiper-pointer-events {
+    touch-action: pan-y;
+}
+.swiper {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+}
+
+.swiper-android .swiper-slide, .swiper-wrapper {
+    transform: translateZ(0);
+}
+
+.swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    transition-property: transform;
+    box-sizing: content-box;
+}
+
+.swiper-slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition-property: transform;
+}
+.item {
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    font-size: 1rem;
+    color: #fff;
+    transition: transform .3s ease-in-out;
+}
+.item {
+    margin-right: .575em;
+    vertical-align: top;
+}
+
+.item__thumb {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    border-radius: 4px;
+    background-color: hsla(0,0%,100%,.13);
+    /*border-style:solid;
+    border-color: violet;*/
+}
+.item__thumb {
+    transition: box-shadow .3s ease-in-out;
+    box-shadow: 0 0 20px 0 transparent, 0 0 5px 0 transparent;
+    will-change: box-shadow;
+}
+
+
+.item__thumb img {
+    height:auto;
+    max-width: 100%
+}
+
+.item__info-rank {
+    display: inline-grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: repeat(3,auto);
+    align-items: flex-start;
+    -moz-column-gap: 1.25em;
+    column-gap: 1.25em;
+}
+
+.item__info {
+    padding: .4em 0 0 0;
+    box-sizing: border-box;
+    color: hsla(0,0%,100%,.7);
+}
+
+.item__thumb:not(.item__thumb-16x9):not(.item__thumb-1x1):not(.item__thumb-200x87)+.item__info-rank .item__rank-no {
+    top: .17em;
+}
+
+.item__rank-no {
+    grid-row: 1/last-line;
+    position: relative;
+    z-index: 2;
+    top: .6em;
+    text-align: left;
+    line-height: 0;
+    color: gold;
+    font-size: 3.6em;
+    transform: skewX(-10deg) translateY(-.2em);
+    font-weight: 700;
+    letter-spacing: -5px;
+}
+
+.item__title {
+    position: relative;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    display: -webkit-inline-box;
+    max-width: 100%;
+    font-size: 0.8em;
+    line-height: 2;
+    font-weight: 700;
+    color: #000;
+    /*border-style:solid;
+    border-color:blue;*/
+    word-break:break-all;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: color .1s;
+}
+
+
+.css-1ufpzhj .slide_item_all {
+    color: #000;
+}
+
+
+.css-1ufpzhj .slide_item_all {
+    top: -2em;
+    cursor: pointer;
+    color: #000;
+}
+
+
+.slide_item_all {
+    position: absolute;
+    top: -2vw;
+    right: 0;
+    z-index: 2;
+    text-align: right;
+    font-size: 1.125em;
+    color: hsla(0,0%,100%,.3);
+}
+button, [type="button"], [type="reset"], [type="submit"] {
+    -webkit-appearance: button;
+}
+button {
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+}
+
+
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trends</title>
+<!--이거 아님 trends_all에서 편집-->
+
+</head>
+<body>
+<link rel="stylesheet" href="{% static 'TrendingBooksDetail.css' %}">
+<div class="articles">
+
+    {% for book in books %}
+<!--        <p>{{ book.weekly_rank }} {{ book.title }} {{ book.writer }}</p>-->
+
+    <div class="view_type_list switch_prod_wrap">
+        <ol class="prod_list">
+          <li class="prod_item" data-id="S000200746091">
+            <div id="prod_item_each" class="prod_area horizontal">
+              <div class="prod_thumb_box size_lg">
+                <a class="prod_link" href="https://product.kyobobook.co.kr/detail/S000200746091">
+                  <span class="img_box">
+                    <img data-kbbfn="s3-image" loading="lazy" alt="S000200746091" src="{{ book.image }}" data-src="https://contents.kyobobook.co.kr/sih/fit-in/142x0/pdt/9791168473690.jpg">
+                  </span>
+                </a>
+              </div>
+              <div class="prod_info_box">
+                <div class="prod_rank">
+                  <div class="badge_flag badge_light_gray">
+                    <span class="sy-text">{{ book.weekly_rank }}</span>
+                  </div>
+                </div>
+                <div class="prod_badge">
+    <!--             판매처 로고   -->
+                  <span class="badge_md badge_line_primary rep"></span>
+                </div>
+                <a href="https://product.kyobobook.co.kr/detail/S000200746091" class="prod_info"><span class="prod_name" style="cursor:hand;color:royalblue">{{ book.title }}</span></a>
+                <span class="prod_author">{{ book.writer }}</span>
+                <div class="prod_price">
+    <!--              <span class="percent">10%</span>-->
+    <!--              <span class="price"><span class="val">6,480</span><span class="unit">원</span></span>-->
+                </div>
+                <p></p>
+                <div class="prod_bottom">
+                  <div class="review_summary_wrap type_sm">
+                    <span class="review_klover_box">
+                      ★
+<!--                      <span class="review_klover_text font_size_xxs">9.43</span>-->
+<!--                      <span class="review_desc">(343개의 리뷰)</span>-->
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ol>
+    </div>
+
+
+    {% endfor %}
+</div>
+
+</body>
+</html>
+
+
+
